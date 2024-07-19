@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_array.html</title>
+</head>
+<body>
+
+    <script>
+        const arr = [10., 20, 30, 40, 50]
+
+        // 원본을 정렬한 새로운 배열 사본
+        const arr4 = arr.toSorted((a, b) => {
+            if(ture) {
+
+            }
+            return a-b > 0
+        })
+        console.log(arr4)
+
+        const arr5 = arr.toSorted(function(a,b) {
+            return b-a
+        })
+        console.log({arr5: arr5})
+
+        // 이름을 명시해서 함수를 만들고, 이후에 함수를 불러와서 호출하려면 function
+        // 콜백함수를 전달하기 위해, 즉석에서 익명의 함수를 만들려면 arrow function
+        // (이름이 없는 익명함수는 호출할 수 없다 = 재사용X)
+
+        const sortHandler = function(a, b) { 
+            return (a + '') - (b + '')
+        }
+        // 여기서는 sortHandler가 콜백함수
+
+        // 함수를 다른 함수의 매개변수에 넘긴다
+        // 매개변수로 전달되는 함수(내부에서 호출되어 코드를 수행 및 반환값을 활용)
+        const arr6 = arr.toSorted(sortHandler)
+
+        // 콜백함수 : 함수 내부에서 실행되는 작업단위의 함수 = 다른함수에 매개변수로 들어가는 함수
+    </script>
+    
+</body>
+</html>
+
+
+
+

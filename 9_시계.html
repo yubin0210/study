@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>9_시계.html</h1>
+    <hr>
+
+    <div id="root">
+        <h3 id="clock"></h3>
+    </div>
+
+    <script>
+        function getTime() {
+            const date = new Date()         // () 안을 비워두면 현재시간
+            const yyyy = date.getFullYear()
+            let MM = date.getMonth() +1     // January: 0, February: 1
+            let dd = date.getDate()
+            const day = date.getDay()       // Sun: 0, Mon: 1, Tue: 2 ...
+            let hh = date.getHours()
+            let mm = date.getMinutes()
+            let ss = date.getSeconds()
+
+            
+            MM = MM < 10 ? '0' + MM : MM
+            dd = dd < 10 ? '0' + dd : dd
+            hh = hh < 10 ? '0' + hh : hh
+            mm = mm < 10 ? '0' + mm : mm
+            ss = ss < 10 ? '0' + ss : ss
+
+            return `${yyyy}-${MM}-${dd} ${hh}:${mm}:${ss}`
+        }
+
+        setInterval(() => document.getElementById('clock').innerText = getTime(), 1000)
+        // setInterval (콜백함수, 주기)
+        // 주기적으로 콜백함수를 실행한다
+    </script>
+    
+</body>
+</html>

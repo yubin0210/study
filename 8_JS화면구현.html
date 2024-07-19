@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_JS화면구현.html</title>
+    <style>
+        #tb {
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        #tb td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        #tb tr > td:first-child {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JSON파일 내용 불러와서 화면에 출력하기</h1>
+    <hr>
+
+    <div id="root">
+        <table id="tb"></table>
+    </div>
+
+    <script src="homeplus(berry).js"></script>
+    <script>
+        console.log(arr)
+        
+        const tb = document.getElementById('tb')
+        let index = 1
+        arr.forEach(dto => {
+            tag = ''
+            tag += `<tr>`
+            tag += `    <td>${index}</td>`
+            tag += `    <td>${dto.name}</td>`
+            tag += `    <td>${dto.salePrice}</td>`
+            tag += `    <td>${dto.salesCount}</td>`
+            tag += `    <td>${dto.grade}</td>`
+            tag += `    <td>${dto.reviewCount}</td>`
+            tag += `</tr>`
+            tb.innerHTML += tag
+            index ++
+        })
+    </script>
+    
+</body>
+</html>

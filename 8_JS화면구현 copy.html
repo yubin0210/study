@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_JS화면구현.html</title>
+    <style>
+        #root {
+            width: 1200px;
+            margin: auto;
+        }
+        .item {
+            display: flex;
+            flex-flow: wrap;
+            transition-duration: 0.3s;
+        }
+        .box {
+            padding: 10px;
+            border: 1px solid black;
+            width: 300px;
+            margin: 10px;
+        }
+        .box > div:nth-child(2) {
+            font-weight: bold;
+        }
+        .box:hover {
+            background-color: lightsalmon;
+            transition-duration: 0.3s;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>JSON파일 내용 불러와서 화면에 출력하기</h1>
+    <hr>
+
+    <div id="root">
+    </div>
+
+    <script src="homeplus(berry).js"></script>
+    <script>
+        console.log(arr)
+        
+        const root = document.getElementById('root')
+        const e1 = document.createElement('div')
+        e1.className = 'item'
+
+        // 원하는 조건으로 정렬
+        arr.sort((a, b) => a.price - b.price)
+
+        // 원하는 단어로 필터링
+        const arr2 = arr.filter(dto => dto.name.includes('블루베리'))
+        
+        // json데이터를 화면에 반영하는 코드
+        let index = 1
+        arr.forEach(dto => {
+            let tag = ''
+            tag += `<div class="box">`
+            tag += `    <div>${index}</div>`
+            tag += `    <div>${dto.name}</div>`
+            tag += `    <div>${dto.price}</div>`
+            tag += `    <div>${dto.salePrice}</div>`
+            tag += `    <div>${dto.salesCount}</div>`
+            tag += `    <div>${dto.grade}</div>`
+            tag += `    <div>${dto.reviewCount}</div>`
+            tag += `</div>`
+          
+            e1.innerHTML += tag
+            root.appendChild(e1)
+            index ++
+        })
+
+    </script>
+    
+</body>
+</html>
