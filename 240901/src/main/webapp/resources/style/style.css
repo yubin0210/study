@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.current {
+	background-color: black;
+	color: white;
+}
+
+#root {
+	display: flex;
+	width: 900px;
+	border: 2px solid black;
+}
+
+#root>.left {
+	min-width: 150px;
+	border-right: 2px solid black;
+	padding: 10px;
+}
+
+#root>.right {
+	padding: 10px;
+	width: 100%;
+}
+
+#messageArea {
+	width: 90%;
+	height: 200px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px grey;
+	overflow-y: scroll;
+	padding: 10px;
+}
+
+input[name="msg"] {
+	padding: 10px;
+	width: 500px;
+}
+
+.hidden {
+	display: none;
+}
+
+ul>li {
+	cursor: pointer;
+}
+
+div.service {
+	text-align: center;
+}
+
+div.whisper b {
+	color: #FF00FF;
+}
+
+#messagingArea div.right>div {
+	display: flex;
+	justify-content: space-between;
+}
+
+sub {
+	float: right;
+}
