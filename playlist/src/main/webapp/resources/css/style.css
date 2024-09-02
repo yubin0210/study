@@ -1,0 +1,105 @@
+/* 기본적인 다크 테마 설정 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212; /* Spotify 다크 배경색 */
+    color: #FFFFFF; /* 기본 텍스트는 흰색 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 설정 */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #181818; /* Spotify 다크 테마 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 헤더 스타일 */
+header h1 {
+    font-size: 36px;
+    color: #1DB954; /* Spotify의 녹색 강조 색상 */
+    margin-bottom: 20px;
+}
+
+/* 검색 섹션 */
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section input[type="text"] {
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #3e3e3e;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.search-section button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1DB954; /* Spotify의 녹색 */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+    background-color: #1ed760; /* 약간 더 밝은 녹색 */
+}
+
+/* 추천 섹션 */
+.recommendations h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendations li {
+    padding: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #333333;
+}
+
+.recommendations li a {
+    text-decoration: none;
+    color: #1DB954; /* 링크에 녹색 강조 색상 */
+    transition: color 0.3s ease;
+}
+
+.recommendations li a:hover {
+    color: #1ed760; /* 링크에 hover시 밝은 녹색 */
+}
+
+/* 전반적인 인터랙션 스타일 */
+button:focus, input:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #b3b3b3;
+}
+
+input[type="text"]:focus {
+    background-color: #4f4f4f;
+}
